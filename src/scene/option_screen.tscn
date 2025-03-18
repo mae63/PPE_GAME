@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bff5fs5b27k6o"]
+
+[ext_resource type="Script" path="res://src/script/option_screen.gd" id="1_m7ug1"]
+[ext_resource type="Script" path="res://src/script/volume_slider.gd" id="2_e2y7s"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 4.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m7ug1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 618.0
+offset_top = 332.0
+offset_right = 1346.0
+offset_bottom = 949.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Volume Control"
+
+[node name="Volume_Slider" type="HSlider" parent="VBoxContainer/Label"]
+layout_mode = 2
+offset_left = 13.0
+offset_top = 81.0
+offset_right = 741.0
+offset_bottom = 97.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("2_e2y7s")
+bus_name = "Music"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 2
+offset_left = 622.0
+offset_top = 806.0
+offset_right = 1350.0
+offset_bottom = 917.0
+theme_override_font_sizes/font_size = 75
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
