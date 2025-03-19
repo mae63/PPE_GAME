@@ -1,60 +1,64 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs2y3wqm5el4r"]
+[gd_scene load_steps=2 format=3 uid="uid://cs2y3wqm5el4r"]
 
 [ext_resource type="Script" path="res://src/script/main_menu.gd" id="1_uo5pr"]
-[ext_resource type="Texture2D" uid="uid://chwe5lr3fdscv" path="res://src/picture/start_game.png" id="2_vl6rs"]
-[ext_resource type="Texture2D" uid="uid://dlbbnu2chba2" path="res://src/picture/settings.png" id="3_e75ca"]
-[ext_resource type="Texture2D" uid="uid://cd7olfy3o0c8" path="res://src/picture/exit_game.png" id="4_4i5yg"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
-anchor_right = 1.896
-anchor_bottom = 2.012
-offset_left = -8.0
-offset_top = 1.0
-offset_right = -1715.32
-offset_bottom = -1088.96
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 1.007
+anchor_bottom = 1.056
+offset_left = -574.0
+offset_top = -327.0
+offset_right = -0.0640869
+offset_bottom = -28.288
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 script = ExtResource("1_uo5pr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -956.5
-offset_top = -220.5
-offset_right = 968.5
-offset_bottom = 650.5
+anchor_left = 1.981
+anchor_top = 2.913
+anchor_right = 1.981
+anchor_bottom = 2.913
+offset_left = -2102.0
+offset_top = -1680.67
+offset_right = -1334.0
+offset_bottom = -830.667
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("2_vl6rs")
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 76
+text = "START GAME"
 flat = true
 icon_alignment = 1
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("3_e75ca")
+theme_override_font_sizes/font_size = 76
+text = "OPTIONS"
 flat = true
 icon_alignment = 1
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("4_4i5yg")
+theme_override_font_sizes/font_size = 76
+text = "EXIT GAME"
 flat = true
 icon_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 385.0
-offset_top = 52.0
-offset_right = 1552.0
-offset_bottom = 258.0
+offset_left = 190.0
+offset_top = -7.0
+offset_right = 977.0
+offset_bottom = 154.0
 theme_override_font_sizes/font_size = 117
 text = "GODOT GAME"
 horizontal_alignment = 1
