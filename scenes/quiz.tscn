@@ -1,0 +1,160 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvmxg742bocge"]
+
+[ext_resource type="Script" path="res://scenes/quiz.gd" id="1_bw0co"]
+
+[node name="Quiz" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_bw0co")
+
+[node name="QuestionLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.175
+anchor_top = 0.65
+anchor_right = 14.175
+anchor_bottom = 0.65
+offset_left = -300.0
+offset_right = 300.0
+offset_bottom = 100.0
+grow_horizontal = 2
+text = "quell est la question? "
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TimerLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(600, 50)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 7.5
+anchor_top = 10.6
+anchor_right = 21.5
+anchor_bottom = 11.275
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Temps restant : 60s"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="QuestionProgressLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 3.575
+anchor_top = 0.75
+anchor_right = 5.3
+anchor_bottom = 0.75
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Question 1/10"
+metadata/_edit_use_anchors_ = true
+
+[node name="AnswersContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.525
+anchor_top = 3.875
+anchor_right = 25.125
+anchor_bottom = 9.65
+offset_left = -20.0
+offset_top = -22.0
+offset_right = 20.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Button1" type="Button" parent="AnswersContainer"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="AnswersContainer"]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="AnswersContainer"]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="AnswersContainer"]
+layout_mode = 2
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.1
+anchor_top = 12.275
+anchor_right = 14.1
+anchor_bottom = 12.275
+offset_top = -3.05176e-05
+offset_right = 66.0
+offset_bottom = 31.0
+disabled = true
+text = "Suivant"
+
+[node name="QuestionTimer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[node name="RecapScreen" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ScoreLabel" type="Label" parent="RecapScreen"]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 215.0
+offset_right = 667.0
+offset_bottom = 238.0
+text = "Score final : 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeLeftLabel" type="Label" parent="RecapScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 13.25
+anchor_top = 10.925
+anchor_right = 15.375
+anchor_bottom = 10.925
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Temps restant : "
+metadata/_edit_use_anchors_ = true
+
+[node name="CorrectAnswersLabel" type="Label" parent="RecapScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 13.45
+anchor_top = 11.625
+anchor_right = 15.5
+anchor_bottom = 11.625
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Bonne reponse:"
+metadata/_edit_use_anchors_ = true
+
+[node name="RetryButton" type="Button" parent="RecapScreen"]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 491.0
+offset_right = 658.0
+offset_bottom = 522.0
+text = "Recommencer
+"
+
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="RecapScreen/RetryButton" to="." method="_on_retry_pressed"]

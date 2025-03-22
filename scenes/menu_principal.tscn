@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctkshhrdu8htp"]
+
+[ext_resource type="Script" path="res://scenes/MenuPrincipal.gd" id="1_6y6qh"]
+
+[node name="MenuPrincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6y6qh")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.8
+anchor_top = 2.8
+anchor_right = 15.8
+anchor_bottom = 2.85
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Titre"
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.95
+anchor_top = 9.05
+anchor_right = 15.95
+anchor_bottom = 9.05
+offset_right = 46.0
+offset_bottom = 31.0
+text = "Start"
+metadata/_edit_use_anchors_ = true
+
+[node name="HardModeButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.425
+anchor_top = 7.625
+anchor_right = 15.425
+anchor_bottom = 7.625
+offset_left = -6.10352e-05
+offset_right = 94.9999
+offset_bottom = 31.0
+text = "Hard Mode
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 16.05
+anchor_top = 10.9
+anchor_right = 16.825
+anchor_bottom = 11.475
+offset_right = 8.0
+offset_bottom = 8.0
+text = "quit"
+metadata/_edit_use_anchors_ = true
+
+[node name="HardModeLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 15.725
+anchor_top = 5.5
+anchor_right = 15.725
+anchor_bottom = 5.5
+offset_right = 40.0
+offset_bottom = 23.0
+rotation = -0.00184228
+text = "hard mode off "
+metadata/_edit_use_anchors_ = true
