@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cfbmpgl6k1c01"
+path="res://.godot/imported/unit-tree.obj-a6e727b65cb24e2394abeeb1efe4e54b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/unit-tree.obj-a6e727b65cb24e2394abeeb1efe4e54b.mesh"]
+
+source_file="res://kenney_hexagon-kit/Models/OBJ format/unit-tree.obj"
+dest_files=["res://.godot/imported/unit-tree.obj-a6e727b65cb24e2394abeeb1efe4e54b.mesh", "res://.godot/imported/unit-tree.obj-a6e727b65cb24e2394abeeb1efe4e54b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

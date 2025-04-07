@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c06hvkdtyhvre"
+path="res://.godot/imported/path-start.obj-7f1bfd5ae47bb93d8a563e01e6728f84.mesh"
+
+[deps]
+
+files=["res://.godot/imported/path-start.obj-7f1bfd5ae47bb93d8a563e01e6728f84.mesh"]
+
+source_file="res://kenney_hexagon-kit/Models/OBJ format/path-start.obj"
+dest_files=["res://.godot/imported/path-start.obj-7f1bfd5ae47bb93d8a563e01e6728f84.mesh", "res://.godot/imported/path-start.obj-7f1bfd5ae47bb93d8a563e01e6728f84.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

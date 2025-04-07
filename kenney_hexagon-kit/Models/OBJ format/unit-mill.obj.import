@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4gesxgbwc0um"
+path="res://.godot/imported/unit-mill.obj-8fe4976f9146cb5da75ce99a356da9ee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/unit-mill.obj-8fe4976f9146cb5da75ce99a356da9ee.mesh"]
+
+source_file="res://kenney_hexagon-kit/Models/OBJ format/unit-mill.obj"
+dest_files=["res://.godot/imported/unit-mill.obj-8fe4976f9146cb5da75ce99a356da9ee.mesh", "res://.godot/imported/unit-mill.obj-8fe4976f9146cb5da75ce99a356da9ee.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

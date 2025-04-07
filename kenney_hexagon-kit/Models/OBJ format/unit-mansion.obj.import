@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dblrefwae7ggo"
+path="res://.godot/imported/unit-mansion.obj-744c4488d1330c119f0c802ccedde7d5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/unit-mansion.obj-744c4488d1330c119f0c802ccedde7d5.mesh"]
+
+source_file="res://kenney_hexagon-kit/Models/OBJ format/unit-mansion.obj"
+dest_files=["res://.godot/imported/unit-mansion.obj-744c4488d1330c119f0c802ccedde7d5.mesh", "res://.godot/imported/unit-mansion.obj-744c4488d1330c119f0c802ccedde7d5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

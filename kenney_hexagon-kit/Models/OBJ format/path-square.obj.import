@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://de0qmfwmsdvh3"
+path="res://.godot/imported/path-square.obj-58d1f1eb1cad285c426ee7c1daf695e9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/path-square.obj-58d1f1eb1cad285c426ee7c1daf695e9.mesh"]
+
+source_file="res://kenney_hexagon-kit/Models/OBJ format/path-square.obj"
+dest_files=["res://.godot/imported/path-square.obj-58d1f1eb1cad285c426ee7c1daf695e9.mesh", "res://.godot/imported/path-square.obj-58d1f1eb1cad285c426ee7c1daf695e9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

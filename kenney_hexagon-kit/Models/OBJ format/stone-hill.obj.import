@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8psv3eiote0w"
+path="res://.godot/imported/stone-hill.obj-eab79f192f2f6b861258c5b7dca44399.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stone-hill.obj-eab79f192f2f6b861258c5b7dca44399.mesh"]
+
+source_file="res://kenney_hexagon-kit/Models/OBJ format/stone-hill.obj"
+dest_files=["res://.godot/imported/stone-hill.obj-eab79f192f2f6b861258c5b7dca44399.mesh", "res://.godot/imported/stone-hill.obj-eab79f192f2f6b861258c5b7dca44399.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
