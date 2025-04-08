@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ci3kik0iui75v"
+path="res://.godot/imported/building-dock.obj-e2a8957859c004320e8f28f8deb9588d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building-dock.obj-e2a8957859c004320e8f28f8deb9588d.mesh"]
+
+source_file="res://scenes/kenney_hexagon-kit/Models/OBJ format/building-dock.obj"
+dest_files=["res://.godot/imported/building-dock.obj-e2a8957859c004320e8f28f8deb9588d.mesh", "res://.godot/imported/building-dock.obj-e2a8957859c004320e8f28f8deb9588d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
