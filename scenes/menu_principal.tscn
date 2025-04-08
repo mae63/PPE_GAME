@@ -103,11 +103,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="logo" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -65.0
-offset_top = 3.0
-offset_right = 959.0
-offset_bottom = 1027.0
-scale = Vector2(0.136335, 0.136886)
+offset_left = -70.0
+offset_top = -1.0
+offset_right = 954.0
+offset_bottom = 1023.0
+scale = Vector2(0.116264, 0.107928)
 texture = ExtResource("6_qcl6i")
 
 [connection signal="pressed" from="TextureRect/HardModeButton" to="." method="_on_hard_mode_pressed"]
