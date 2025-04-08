@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cs5g48nhh46jf"
+path="res://.godot/imported/block-snow-overhang-hexagon.obj-1cea2c96dd7dfdc07dd1403337c12d6a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/block-snow-overhang-hexagon.obj-1cea2c96dd7dfdc07dd1403337c12d6a.mesh"]
+
+source_file="res://kenney_platformer-kit/Models/OBJ format/block-snow-overhang-hexagon.obj"
+dest_files=["res://.godot/imported/block-snow-overhang-hexagon.obj-1cea2c96dd7dfdc07dd1403337c12d6a.mesh", "res://.godot/imported/block-snow-overhang-hexagon.obj-1cea2c96dd7dfdc07dd1403337c12d6a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

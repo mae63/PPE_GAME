@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://boj0apo422kg6"
+path="res://.godot/imported/block-snow-overhang-large-slope-steep.obj-11698a815c2339db4f7047a2a845745f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/block-snow-overhang-large-slope-steep.obj-11698a815c2339db4f7047a2a845745f.mesh"]
+
+source_file="res://kenney_platformer-kit/Models/OBJ format/block-snow-overhang-large-slope-steep.obj"
+dest_files=["res://.godot/imported/block-snow-overhang-large-slope-steep.obj-11698a815c2339db4f7047a2a845745f.mesh", "res://.godot/imported/block-snow-overhang-large-slope-steep.obj-11698a815c2339db4f7047a2a845745f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

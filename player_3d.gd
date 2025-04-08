@@ -32,6 +32,14 @@ func _ready():
 	# Configure le rayon pour détecter le sol
 	_floor_ray.target_position = Vector3(0, -1.0, 0)
 	_floor_ray.enabled = true
+	
+	# Restaurer la position si on revient de la scène précédente
+	var scene = get_tree().current_scene
+	if scene and "returning" in scene and scene.returning:
+		global_position = scene.last_position
+		rotation.y = scene.last_rotation
+		print("Position restaurée : ", global_position)
+	
 	_last_valid_position = position
 	
 	# Connecter les signaux des contrôles mobiles s'ils existent
@@ -39,6 +47,9 @@ func _ready():
 		_mobile_controls.connect("joystick_moved", Callable(self, "_on_joystick_moved"))
 		_mobile_controls.connect("camera_rotated", Callable(self, "_on_camera_rotated"))
 	
+	# Ajouter le joueur au groupe "player" pour la détection
+	add_to_group("player")
+
 func _input(event:InputEvent)-> void:
 	if not _using_mobile_controls:
 		if event.is_action_pressed("ui_cancel"):     #TOUCHE ESC 
@@ -54,7 +65,9 @@ func _unhandled_input(event: InputEvent)-> void:
 			Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 			)
 		if is_camera_motion: 
-			_camera_input_direction = event.screen_relative * mouse_sensitivity 
+			_camera_input_direction = event.relative * mouse_sensitivity 
+		elif event.is_action_pressed("interact"):
+			_try_interact()
 		
 func is_on_path() -> bool:
 	if _floor_ray.is_colliding():
@@ -63,6 +76,25 @@ func is_on_path() -> bool:
 		if collider is StaticBody3D and collider.is_in_group("path"):
 			return true
 	return false
+
+func _try_interact() -> void:
+	# Vérifier s'il y a un objet interactif devant le joueur
+	var space_state = get_world_3d().direct_space_state
+	var from = _camera.global_position
+	var to = from - _camera.global_transform.basis.z * 2.0  # Distance d'interaction
+	
+	var parameters = PhysicsRayQueryParameters3D.new()
+	parameters.from = from
+	parameters.to = to
+	parameters.collision_mask = 1  # Layer par défaut
+	parameters.collide_with_bodies = true
+	
+	var result = space_state.intersect_ray(parameters)
+	
+	if result:
+		var object = result.collider
+		if object.has_method("interact"):
+			object.interact(self)
 
 func _on_joystick_moved(direction: Vector2) -> void:
 	_joystick_input = direction
