@@ -1,73 +1,102 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctkshhrdu8htp"]
+[gd_scene load_steps=6 format=3 uid="uid://ctkshhrdu8htp"]
 
-[ext_resource type="Script" path="res://scenes/MenuPrincipal.gd" id="1_6y6qh"]
+[ext_resource type="Script" uid="uid://b857egeg6soig" path="res://scenes/MenuPrincipal.gd" id="1_6y6qh"]
+[ext_resource type="Texture2D" uid="uid://dtniwxynnepvd" path="res://src/picture/WhatsApp Image 2025-04-07 at 12.14.32.jpeg" id="2_mk4g1"]
+[ext_resource type="Texture2D" uid="uid://dcwt3c0x5fgux" path="res://src/picture/Hard Mode.png" id="3_iep14"]
+[ext_resource type="Texture2D" uid="uid://w2qy7v8iutxv" path="res://src/picture/Start Game.png" id="4_w5ui5"]
+[ext_resource type="Texture2D" uid="uid://bgjjyh0cqjypj" path="res://src/picture/Quit Game.png" id="5_qcl6i"]
 
 [node name="MenuPrincipal" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 74.0
+offset_top = 8.0
+offset_right = 114.0
+offset_bottom = 48.0
 script = ExtResource("1_6y6qh")
 
-[node name="TitleLabel" type="Label" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 15.8
-anchor_top = 2.8
-anchor_right = 15.8
-anchor_bottom = 2.85
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Titre"
-metadata/_edit_use_anchors_ = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -5.0
+offset_right = -71.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(28.6182, 10.9573)
+texture = ExtResource("2_mk4g1")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="StartButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 15.95
-anchor_top = 9.05
-anchor_right = 15.95
-anchor_bottom = 9.05
-offset_right = 46.0
-offset_bottom = 31.0
-text = "Start"
-metadata/_edit_use_anchors_ = true
+[node name="HardModeButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 3.66899
+offset_top = 14.3283
+offset_right = 1539.67
+offset_bottom = 1038.32
+scale = Vector2(0.0211538, 0.020057)
+texture_normal = ExtResource("3_iep14")
 
-[node name="HardModeButton" type="Button" parent="."]
+[node name="StartButton" type="TextureButton" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 15.425
-anchor_top = 7.625
-anchor_right = 15.425
-anchor_bottom = 7.625
-offset_left = -6.10352e-05
-offset_right = 94.9999
-offset_bottom = 31.0
-text = "Hard Mode
-"
-metadata/_edit_use_anchors_ = true
+anchor_right = 0.072
+offset_left = -790.022
+offset_top = -128.773
+offset_right = 231.102
+offset_bottom = 895.227
+scale = Vector2(0.0300145, 0.0206924)
+pivot_offset = Vector2(819.955, 152.723)
+texture_normal = ExtResource("4_w5ui5")
 
-[node name="QuitButton" type="Button" parent="."]
+[node name="QuitButton" type="TextureButton" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 16.05
-anchor_top = 10.9
-anchor_right = 16.825
-anchor_bottom = 11.475
-offset_right = 8.0
-offset_bottom = 8.0
-text = "quit"
-metadata/_edit_use_anchors_ = true
+anchor_left = 0.25
+anchor_top = 0.094
+anchor_right = 0.363
+anchor_bottom = 0.14
+offset_left = -5.94664
+offset_top = 23.108
+offset_right = 1525.53
+offset_bottom = 1044.35
+scale = Vector2(0.0209299, 0.0211926)
+texture_normal = ExtResource("5_qcl6i")
 
 [node name="HardModeLabel" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 15.725
-anchor_top = 5.5
-anchor_right = 15.725
-anchor_bottom = 5.5
-offset_right = 40.0
-offset_bottom = 23.0
+anchor_left = 12.7215
+anchor_top = 3.87044
+anchor_right = 14.5965
+anchor_bottom = 3.87044
+offset_left = -224.859
+offset_top = -2.81764
+offset_right = -184.859
+offset_bottom = 20.1823
 rotation = -0.00184228
+scale = Vector2(3.70291, 2.09431)
 text = "hard mode off "
 metadata/_edit_use_anchors_ = true
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.3814
+anchor_top = 2.90339
+anchor_right = 17.0604
+anchor_bottom = 3.40339
+offset_left = -186.257
+offset_top = 418.864
+offset_right = -257.417
+offset_bottom = 421.864
+scale = Vector2(7.10316, 2.81237)
+text = "Titre"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="TextureRect/HardModeButton" to="." method="_on_hard_mode_pressed"]
+[connection signal="pressed" from="TextureRect/StartButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="TextureRect/QuitButton" to="." method="_on_quit_pressed"]

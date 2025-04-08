@@ -1,8 +1,8 @@
 extends Control
 
-@onready var start_button = $StartButton
-@onready var hard_mode_button = $HardModeButton
-@onready var quit_button = $QuitButton
+@onready var start_button = $TextureRect/StartButton
+@onready var hard_mode_button = $TextureRect/HardModeButton
+@onready var quit_button = $TextureRect/QuitButton
 @onready var hard_mode_label = $HardModeLabel
 
 func _ready():
@@ -15,7 +15,7 @@ func _on_start_pressed():
 
 func _on_hard_mode_pressed():
 	GameManager.set_hard_mode(true)  # Activer le mode difficile
-	hard_mode_label.text = "hard mode on"
+	hard_mode_label.text = "Hard Mode On"
 
 func _on_quit_pressed():
 	get_tree().quit()  # Quitter le jeu

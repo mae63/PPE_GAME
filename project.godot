@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioPlayer="*res://src/scene/audio_player.tscn"
+GameManager="*res://scenes/GameManager.gd"
+
+[editor]
+
+version_control/autoload_on_startup=true
 
 [rendering]
 
