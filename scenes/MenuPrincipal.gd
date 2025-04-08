@@ -15,7 +15,7 @@ func _on_start_pressed():
 
 func _on_hard_mode_pressed():
 	GameManager.set_hard_mode(true)  # Activer le mode difficile
-	hard_mode_label.text = "Hard Mode On"
+	hard_mode_label.text = "Hard Mode: On"
 
 func _on_quit_pressed():
 	get_tree().quit()  # Quitter le jeu
