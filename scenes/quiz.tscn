@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvmxg742bocge"]
+[gd_scene load_steps=5 format=3 uid="uid://bvmxg742bocge"]
 
-[ext_resource type="Script" uid="uid://bh0nlrm1mfx7m" path="res://script/quiz.gd" id="1_bw0co"]
+[ext_resource type="Script" uid="uid://bh0nlrm1mfx7m" path="res://scenes/quiz.gd" id="1_bw0co"]
+[ext_resource type="Texture2D" uid="uid://cb2bhudxchvwj" path="res://src/picture/fond.jpeg" id="2_jng0p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fkxq"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jng0p"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Quiz" type="Control"]
 layout_mode = 3
@@ -9,18 +16,26 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_bw0co")
 
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1160.0
+offset_bottom = 640.0
+texture = ExtResource("2_jng0p")
+expand_mode = 1
+
 [node name="QuestionLabel" type="Label" parent="."]
 custom_minimum_size = Vector2(600, 100)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 14.175
-anchor_top = 0.65
-anchor_right = 14.175
-anchor_bottom = 0.65
+anchor_left = 13.525
+anchor_top = 2.925
+anchor_right = 13.525
+anchor_bottom = 2.925
 offset_left = -300.0
 offset_right = 300.0
 offset_bottom = 100.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "quell est la question? "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -30,12 +45,13 @@ metadata/_edit_use_anchors_ = true
 custom_minimum_size = Vector2(600, 50)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 7.5
-anchor_top = 10.6
-anchor_right = 21.5
-anchor_bottom = 11.275
+anchor_left = 5.9
+anchor_top = 4.25
+anchor_right = 19.9
+anchor_bottom = 4.925
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Temps restant : 60s"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -44,22 +60,22 @@ metadata/_edit_use_anchors_ = true
 [node name="QuestionProgressLabel" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 3.575
-anchor_top = 0.75
-anchor_right = 5.3
-anchor_bottom = 0.75
+anchor_left = 1.975
+anchor_top = 0.575
+anchor_right = 3.7
+anchor_bottom = 0.575
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Question 1/10"
 metadata/_edit_use_anchors_ = true
 
-[node name="AnswersContainer" type="VBoxContainer" parent="."]
+[node name="AnswersContainer" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 4.525
-anchor_top = 3.875
-anchor_right = 25.125
-anchor_bottom = 9.65
+anchor_left = 9.7
+anchor_top = 5.9
+anchor_right = 17.75
+anchor_bottom = 11.725
 offset_left = -20.0
 offset_top = -22.0
 offset_right = 20.0
@@ -70,26 +86,60 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Button1" type="Button" parent="AnswersContainer"]
 layout_mode = 2
+offset_left = 19.0
+offset_top = 17.0
+offset_right = 337.0
+offset_bottom = 53.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2fkxq")
 
 [node name="Button2" type="Button" parent="AnswersContainer"]
 layout_mode = 2
+offset_left = 18.0
+offset_top = 86.0
+offset_right = 344.0
+offset_bottom = 124.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2fkxq")
 
 [node name="Button3" type="Button" parent="AnswersContainer"]
 layout_mode = 2
+offset_left = 18.0
+offset_top = 155.0
+offset_right = 347.0
+offset_bottom = 194.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2fkxq")
 
 [node name="Button4" type="Button" parent="AnswersContainer"]
 layout_mode = 2
+offset_left = 16.0
+offset_top = 227.0
+offset_right = 345.0
+offset_bottom = 265.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2fkxq")
 
 [node name="NextButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 14.1
-anchor_top = 12.275
-anchor_right = 14.1
-anchor_bottom = 12.275
-offset_top = -3.05176e-05
-offset_right = 66.0
-offset_bottom = 31.0
+anchor_left = 12.4
+anchor_top = 12.8
+anchor_right = 12.4
+anchor_bottom = 12.8
+offset_left = -3.05176e-05
+offset_right = 99.0
+offset_bottom = 68.0
+theme_override_styles/disabled = SubResource("StyleBoxFlat_jng0p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2fkxq")
 disabled = true
 text = "Suivant"
 
@@ -98,63 +148,74 @@ wait_time = 60.0
 autostart = true
 
 [node name="RecapScreen" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+anchors_preset = 0
+offset_left = 269.0
+offset_top = 194.0
+offset_right = 940.0
+offset_bottom = 538.0
 
 [node name="ScoreLabel" type="Label" parent="RecapScreen"]
-layout_mode = 0
-offset_left = 539.0
-offset_top = 215.0
-offset_right = 667.0
-offset_bottom = 238.0
+layout_mode = 2
+anchor_left = 0.158
+anchor_top = 0.113
+anchor_right = 0.158
+anchor_bottom = 0.113
+offset_left = 9.98199
+offset_top = -9.872
+offset_right = 103.982
+offset_bottom = 39.128
 text = "Score final : 
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TimeLeftLabel" type="Label" parent="RecapScreen"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 13.25
-anchor_top = 10.925
-anchor_right = 15.375
-anchor_bottom = 10.925
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Temps restant : "
-metadata/_edit_use_anchors_ = true
-
 [node name="CorrectAnswersLabel" type="Label" parent="RecapScreen"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 13.45
-anchor_top = 11.625
-anchor_right = 15.5
-anchor_bottom = 11.625
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 2
+anchor_left = 0.181818
+anchor_top = 0.541
+anchor_right = 0.181818
+anchor_bottom = 0.541
+offset_top = -0.104004
+offset_right = 124.0
+offset_bottom = 22.896
 text = "Bonne reponse:"
 metadata/_edit_use_anchors_ = true
 
+[node name="TimeLeftLabel" type="Label" parent="RecapScreen"]
+layout_mode = 2
+anchor_left = 0.167
+anchor_top = 0.328
+anchor_right = 0.167
+anchor_bottom = 0.328
+offset_left = -0.0569763
+offset_top = 0.167999
+offset_right = 130.943
+offset_bottom = 23.168
+text = "Temps restant : "
+metadata/_edit_use_anchors_ = true
+
 [node name="RetryButton" type="Button" parent="RecapScreen"]
-layout_mode = 0
-offset_left = 538.0
-offset_top = 491.0
-offset_right = 658.0
-offset_bottom = 522.0
+layout_mode = 2
+offset_left = 224.0
+offset_top = 246.0
+offset_right = 344.0
+offset_bottom = 287.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2fkxq")
 text = "Recommencer
 "
 
+[node name="MenuButton" type="Button" parent="RecapScreen"]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 315.0
+offset_right = 349.0
+offset_bottom = 388.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2fkxq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2fkxq")
+text = "Retour au menu "
+
 [connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
-[connection signal="pressed" from="RecapScreen/RetryButton" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="RecapScreen/RetryButton" to="." method="_on_retry_button_pressed"]
