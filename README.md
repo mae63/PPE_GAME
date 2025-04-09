@@ -22,7 +22,7 @@ PPE_GAME est un petit jeu qui permet de tester ses connaissances en **culture g�
 
 ## 🎮 Captures d’écran
 
-<img src="src/picture/fond.jpeg" width="500"/>
+<img src="logo/picture/fond.jpeg" width="500"/>
 
 ---
 
