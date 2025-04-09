@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwmgism4w3yfu"]
 
 [ext_resource type="Script" uid="uid://60jsj6aaovtn" path="res://script/quiz_moyen.gd" id="1_1qg6y"]
-[ext_resource type="Texture2D" uid="uid://cb2bhudxchvwj" path="res://src/picture/fond.jpeg" id="2_q4k1c"]
+[ext_resource type="Texture2D" uid="uid://cb2bhudxchvwj" path="res://logo/picture/fond.jpeg" id="2_q4k1c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fkxq"]
 bg_color = Color(0, 0, 0, 0)

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://buskw8ygmxw8l"
+path="res://.godot/imported/unit-wall-tower.obj-93997f4f810a8a29165c87cb4748c696.mesh"
+
+[deps]
+
+files=["res://.godot/imported/unit-wall-tower.obj-93997f4f810a8a29165c87cb4748c696.mesh"]
+
+source_file="res://ile/kenney_hexagon-kit/Models/OBJ format/unit-wall-tower.obj"
+dest_files=["res://.godot/imported/unit-wall-tower.obj-93997f4f810a8a29165c87cb4748c696.mesh", "res://.godot/imported/unit-wall-tower.obj-93997f4f810a8a29165c87cb4748c696.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

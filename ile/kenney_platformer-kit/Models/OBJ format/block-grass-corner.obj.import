@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://i28lhti00cp1"
+path="res://.godot/imported/block-grass-corner.obj-a590bfb3dc751e9bff33d091c991f653.mesh"
+
+[deps]
+
+files=["res://.godot/imported/block-grass-corner.obj-a590bfb3dc751e9bff33d091c991f653.mesh"]
+
+source_file="res://ile/kenney_platformer-kit/Models/OBJ format/block-grass-corner.obj"
+dest_files=["res://.godot/imported/block-grass-corner.obj-a590bfb3dc751e9bff33d091c991f653.mesh", "res://.godot/imported/block-grass-corner.obj-a590bfb3dc751e9bff33d091c991f653.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

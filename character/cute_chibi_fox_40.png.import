@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dn0la15ite3h6"
+path.s3tc="res://.godot/imported/cute_chibi_fox_40.png-0a7e71f05d6160b59c24b6b0a740c85e.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "79cb82518d19d6c30bb6d6d1d905153c"
+}
+
+[deps]
+
+source_file="res://character/cute_chibi_fox_40.png"
+dest_files=["res://.godot/imported/cute_chibi_fox_40.png-0a7e71f05d6160b59c24b6b0a740c85e.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

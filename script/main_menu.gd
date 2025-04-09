@@ -6,7 +6,7 @@ var is_hard_mode = false # Mode normal par défaut
 
 func _on_start_pressed() -> void:
 	hard_mode_changed.emit(is_hard_mode) # Envoie le mode difficile à la scène du quiz
-	get_tree().change_scene_to_file("res://scenes/ile/map.tscn")
+	get_tree().change_scene_to_file("res://scenes/map.tscn")
 	
 func _on_option_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/option_screen.tscn")
