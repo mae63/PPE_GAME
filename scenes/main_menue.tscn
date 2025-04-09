@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://qwrindvc2hui"]
+[gd_scene load_steps=11 format=3 uid="uid://qwrindvc2hui"]
 
 [ext_resource type="Script" uid="uid://bx3fjs12twgdd" path="res://script/main_menu.gd" id="1_6tihl"]
 [ext_resource type="FontFile" uid="uid://b4plg7kkpearp" path="res://fonts/Modak/Modak-Regular.ttf" id="1_blpvt"]
 [ext_resource type="Texture2D" uid="uid://jupf0x072u3q" path="res://logo/logo.jpeg" id="1_gnign"]
 [ext_resource type="Script" uid="uid://0wehf1miyygk" path="res://script/logo_sprite.gd" id="1_q62vu"]
+[ext_resource type="Texture2D" uid="uid://dhjftuikip0bg" path="res://logo/choose_carac.svg" id="5_37yx3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6tihl"]
 load_path = "res://.godot/imported/WhatsApp Image 2025-04-07 at 12.14.32.jpeg-0e20017844e61120519d1fc357edcf72.ctex"
@@ -150,15 +151,14 @@ offset_bottom = 304.0
 theme_override_fonts/font = ExtResource("1_blpvt")
 theme_override_font_sizes/font_size = 35
 
-[node name="MenuButton" type="MenuButton" parent="UILayer/StartMenu"]
+[node name="choose_carac" type="Button" parent="UILayer/StartMenu"]
 layout_mode = 0
-offset_left = 435.0
-offset_top = 523.0
-offset_right = 718.0
-offset_bottom = 607.0
-theme_override_fonts/font = ExtResource("1_blpvt")
-theme_override_font_sizes/font_size = 50
-text = "Personnage"
+offset_left = 27.0
+offset_top = 27.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_type_variation = &"FlatButton"
+icon = ExtResource("5_37yx3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -169,3 +169,4 @@ libraries = {
 [connection signal="pressed" from="UILayer/StartMenu/VBoxContainer/hard_mode" to="UILayer/StartMenu" method="_on_hard_mode_pressed"]
 [connection signal="pressed" from="UILayer/StartMenu/VBoxContainer/Option" to="UILayer/StartMenu" method="_on_option_pressed"]
 [connection signal="pressed" from="UILayer/StartMenu/VBoxContainer/Exit" to="UILayer/StartMenu" method="_on_exit_pressed"]
+[connection signal="pressed" from="UILayer/StartMenu/choose_carac" to="UILayer/StartMenu" method="_on_choose_carac_pressed"]

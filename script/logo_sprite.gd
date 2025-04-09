@@ -7,11 +7,21 @@ extends Node2D
 var has_shown_logo = false
 
 func _ready():
-	logo_sprite.visible = true # Initially hide the logo
-	start_menu.visible = false # Initially hide the start menu
+	logo_sprite.visible = true
+	start_menu.visible = false
 
 	if !has_shown_logo:
 		has_shown_logo = true
-		logo_sprite.modulate.a = 0.0 # Ensure logo is initially transparent
-		logo_sprite.visible = true # Make the logo node visible
-		start_menu.visible = true # Show the start menu after the delay
+		var initial_color = logo_sprite.modulate
+		initial_color.a = 0.0
+		logo_sprite.modulate = initial_color
+
+		var target_color = logo_sprite.modulate
+		target_color.a = 1.0
+		var tween = create_tween()
+		tween.tween_property(logo_sprite, "modulate", target_color, 3.0)
+		tween.tween_callback(func():
+			await get_tree().create_timer(2.0)
+			start_menu.visible = true
+			logo_sprite.visible = false
+		)
