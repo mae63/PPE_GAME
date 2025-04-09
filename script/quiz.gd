@@ -65,12 +65,13 @@ func _ready():
 	# Configurer et démarrer le Timer
 	timer.wait_time = total_time
 	timer.start()
-	next_button.visible = false #hide the next button
+	next_button.visible = true #hide the next button
+	next_button.disabled = true # Désactivé tant que pas de réponse
 
 
 func _on_answer_selected(index):
 	selected_answer = index
-	#next_button.disabled = false #no need to undisable next button
+	next_button.disabled = false #no need to undisable next button
 
 	# Calculate time and points
 	var time_taken = question_start_time - timer.time_left
@@ -307,4 +308,4 @@ func _on_retry_pressed():
 	
 # --- Fonction appelée lorsque le bouton Menu est pressé ---
 func _on_menu_pressed():
-	get_tree().change_scene_to_file("res://scenes/menu_principal.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_menue.tscn")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bvmxg742bocge"]
 
-[ext_resource type="Script" uid="uid://bh0nlrm1mfx7m" path="res://scenes/quiz.gd" id="1_bw0co"]
+[ext_resource type="Script" uid="uid://bh0nlrm1mfx7m" path="res://script/quiz.gd" id="1_bw0co"]
 [ext_resource type="Texture2D" uid="uid://cb2bhudxchvwj" path="res://src/picture/fond.jpeg" id="2_jng0p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fkxq"]
@@ -24,15 +24,15 @@ texture = ExtResource("2_jng0p")
 expand_mode = 1
 
 [node name="QuestionLabel" type="Label" parent="."]
-custom_minimum_size = Vector2(600, 100)
+custom_minimum_size = Vector2(300, 100)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 13.525
+anchor_left = 8.275
 anchor_top = 2.925
-anchor_right = 13.525
+anchor_right = 8.275
 anchor_bottom = 2.925
-offset_left = -300.0
-offset_right = 300.0
+offset_left = -3.05176e-05
+offset_right = 423.0
 offset_bottom = 100.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -141,13 +141,17 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_2fkxq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_2fkxq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2fkxq")
 disabled = true
-text = "Suivant"
+text = "
+
+
+"
 
 [node name="QuestionTimer" type="Timer" parent="."]
 wait_time = 60.0
 autostart = true
 
 [node name="RecapScreen" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_left = 269.0
 offset_top = 194.0
