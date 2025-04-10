@@ -16,7 +16,6 @@ var question_start_time = 0  # Temps restant au début de la question
 @onready var question_label = $QuestionLabel
 @onready var question_progress_label = $QuestionProgressLabel
 @onready var answers_container = $AnswersContainer
-@onready var next_button = $NextButton
 @onready var timer_label = $TimerLabel
 @onready var timer = $QuestionTimer
 @onready var recap_screen = $RecapScreen
@@ -65,13 +64,9 @@ func _ready():
 	# Configurer et démarrer le Timer
 	timer.wait_time = total_time
 	timer.start()
-	next_button.visible = true #hide the next button
-	next_button.disabled = true # Désactivé tant que pas de réponse
-
 
 func _on_answer_selected(index):
 	selected_answer = index
-	next_button.disabled = false #no need to undisable next button
 
 	# Calculate time and points
 	var time_taken = question_start_time - timer.time_left
@@ -236,7 +231,6 @@ func load_question():
 		button.text = answers[i]
 		button.disabled = false   # Activer le bouton
 	# Désactiver le bouton "Next" tant qu'aucune réponse n'est sélectionnée
-	next_button.disabled = true
 	selected_answer = -1
 
 # --- Fonction _process() pour mettre à jour le Timer ---
@@ -248,29 +242,31 @@ func _process(_delta):
 # L'argument 'index' correspond à l'indice du bouton (0 à 3)
 func _on_answer_pressed(index):
 	selected_answer = index
-	next_button.disabled = false
 	
-	# Calcul du temps écoulé pour répondre à la question
+	# Calcul du temps écoulé pour répondre
 	var time_taken = question_start_time - timer.time_left
 	if time_taken < 0:
 		time_taken = 0
-	# Calcul des points : 1000 points moins 100 points par seconde écoulée (minimum 100 points)
+
+	# Calcul des points (1000 points - 100 points par seconde) minimum 100
 	var points = 1000 - int(time_taken * 100)
 	if points < 100:
 		points = 100
+
 	# Vérifier la réponse et mettre à jour le score
 	if selected_answer == questions[current_question]["correct"]:
 		total_score += points
 		correct_answers += 1
+
 	print("Temps pris : ", time_taken, "s | Points gagnés : ", points)
 
-# --- Fonction appelée lorsque le bouton "Next" est pressé ---
-func _on_NextButton_pressed():
+	# Passer automatiquement à la question suivante
 	current_question += 1
 	if current_question < questions.size():
 		load_question()
 	else:
 		show_recap_screen()
+
 
 # --- Fonction appelée lorsque le Timer atteint 0 ---
 func _on_time_out():
@@ -280,7 +276,6 @@ func _on_time_out():
 func show_recap_screen():
 	question_label.visible = false
 	answers_container.visible = false
-	next_button.visible = false
 	timer_label.visible = false
 	recap_screen.visible = true
 	
@@ -301,7 +296,6 @@ func _on_retry_pressed():
 	recap_screen.visible = false
 	question_label.visible = true
 	answers_container.visible = true
-	next_button.visible = true
 	timer_label.visible = true
 	
 	load_question()

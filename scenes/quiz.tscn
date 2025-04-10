@@ -127,6 +127,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_2fkxq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2fkxq")
 
 [node name="NextButton" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 12.4
@@ -221,5 +222,4 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_2fkxq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2fkxq")
 text = "Retour au menu "
 
-[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
 [connection signal="pressed" from="RecapScreen/RetryButton" to="." method="_on_retry_button_pressed"]
