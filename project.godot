@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Education_game"
-run/main_scene="uid://cr6t0qmn178h6"
+run/main_scene="uid://ctm65sp5itebm"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
