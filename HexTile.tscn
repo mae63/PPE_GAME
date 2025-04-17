@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://p6o118v3g1bq"]
+[gd_scene load_steps=53 format=3 uid="uid://p6o118v3g1bq"]
 
 [ext_resource type="PackedScene" uid="uid://nwb7u3upihmm" path="res://kenney_hexagon-kit/Models/FBX format/grass.fbx" id="1_owltj"]
 [ext_resource type="PackedScene" uid="uid://bxjy4yjqu7x78" path="res://kenney_hexagon-kit/Models/FBX format/building-castle.fbx" id="2_cftjr"]
@@ -49,6 +49,8 @@
 [ext_resource type="PackedScene" uid="uid://bl8slec3cara1" path="res://kenney_platformer-kit/Models/GLB format/flag.glb" id="47_f01ru"]
 [ext_resource type="PackedScene" uid="uid://rpfctiw36mxc" path="res://kenney_platformer-kit/Models/GLB format/button-round.glb" id="48_b0tdw"]
 [ext_resource type="Script" path="res://button_interactif.gd" id="49_qnu1i"]
+[ext_resource type="Script" path="res://kenney_platformer-kit/Models/GLB format/button_round2.gd" id="50_csu2j"]
+[ext_resource type="Script" path="res://kenney_platformer-kit/Models/GLB format/button_round3.gd" id="51_xyr3v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_28xe6"]
 size = Vector3(10.2773, 1, 12.9289)
@@ -733,14 +735,14 @@ transform = Transform3D(-0.0932832, 0, -0.388971, 0, 0.4, 0, 0.388971, 0, -0.093
 [node name="flag4" parent="." instance=ExtResource("47_f01ru")]
 transform = Transform3D(-0.201757, 0, -0.34539, 0, 0.4, 0, 0.34539, 0, -0.201757, 0.816768, 0.2, 0.303305)
 
-[node name="button-round2" parent="." instance=ExtResource("48_b0tdw")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -3.38981, 0.2, 5.37099)
-script = ExtResource("49_qnu1i")
-
-[node name="button-round3" parent="." instance=ExtResource("48_b0tdw")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 4.39335, 0.2, 0.753184)
-script = ExtResource("49_qnu1i")
-
 [node name="button-round4" parent="." instance=ExtResource("48_b0tdw")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.994848, 0.2, 0.0712849)
 script = ExtResource("49_qnu1i")
+
+[node name="button-round2" parent="." instance=ExtResource("48_b0tdw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -3.38981, 0.2, 5.37099)
+script = ExtResource("50_csu2j")
+
+[node name="button-round3" parent="." instance=ExtResource("48_b0tdw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 4.39335, 0.2, 0.753184)
+script = ExtResource("51_xyr3v")

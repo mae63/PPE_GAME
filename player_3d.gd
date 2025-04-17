@@ -142,12 +142,16 @@ func _physics_process(delta: float) -> void :
 	
 	if move_direction.length() > 0.2 and is_on_path():
 		_last_movement_direction = move_direction
-		
-	var target_angle := Vector3.BACK.signed_angle_to(_last_movement_direction, Vector3.UP)
-	_skin.global_rotation.y = lerp_angle(_skin.rotation.y, target_angle, rotation_speed * delta)
 	
-	var ground_speed := Vector2(velocity.x, velocity.z).length()
-	if ground_speed > 0.0 and is_on_path():
-		_skin.move()
+	# Vérifier si le skin existe avant d'y accéder
+	if _skin:
+		var target_angle := Vector3.BACK.signed_angle_to(_last_movement_direction, Vector3.UP)
+		_skin.global_rotation.y = lerp_angle(_skin.rotation.y, target_angle, rotation_speed * delta)
+		
+		var ground_speed := Vector2(velocity.x, velocity.z).length()
+		if ground_speed > 0.0 and is_on_path():
+			_skin.move()
+		else:
+			_skin.idle()
 	else:
-		_skin.idle()
+		print("ATTENTION: _skin est null!")

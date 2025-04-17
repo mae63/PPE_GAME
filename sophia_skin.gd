@@ -1,6 +1,5 @@
 extends Node3D
 
-
 @onready var animation_tree = %AnimationTree
 @onready var state_machine : AnimationNodeStateMachinePlayback = animation_tree.get("parameters/StateMachine/playback")
 @onready var move_tilt_path : String = "parameters/StateMachine/Move/tilt/add_amount"

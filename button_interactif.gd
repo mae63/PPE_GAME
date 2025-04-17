@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var interaction_distance := 2.0
-@export var target_scene: String = "res://new_scene.tscn"
+@export var target_scene: String = "res://scenes/quiz.tscn"
 @export var interaction_key: String = "e"
 
 var player = null
@@ -75,6 +75,9 @@ func _activate_button():
 		
 		# Attendre la fin de l'animation avant de changer de scène
 		await tween.finished
+		
+		# Libérer la souris avant de charger la nouvelle scène
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		
 		# Charger la nouvelle scène
 		get_tree().change_scene_to_file(target_scene)

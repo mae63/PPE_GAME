@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfckbpbuoe34x"]
+
+[ext_resource type="AudioStream" uid="uid://cdwpfufwrsdrj" path="res://audio/Pictionary Music (NES) - Title Screen Theme.mp3" id="1_f1804"]
+[ext_resource type="Script" path="res://src/script/audio_player.gd" id="2_nlbx0"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_f1804")
+autoplay = true
+bus = &"Music"
+script = ExtResource("2_nlbx0")
