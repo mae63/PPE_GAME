@@ -1,0 +1,257 @@
+[33mcommit 7c069e2d34b0a646ae17967dab28ef3213e47240[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Maëlis Isnard <maelis.isnard63gmail.com>
+Date:   Mon Apr 7 23:19:32 2025 +0200
+
+    premier commit mae avant branche
+
+ .gitattributes                                     |     2 [32m+[m
+ .gitignore                                         |     3 [32m+[m
+ HexTile.tscn                                       |   685 [32m++[m
+ hex_grid.gd                                        |    25 [32m+[m
+ icon.svg                                           |     1 [32m+[m
+ icon.svg.import                                    |    37 [32m+[m
+ kenney_hexagon-kit/License.txt                     |    28 [32m+[m
+ .../Models/FBX format/Textures/colormap.png        |   Bin [31m0[m -> [32m10831[m bytes
+ .../Models/FBX format/Textures/colormap.png.import |    35 [32m+[m
+ .../Textures/colormap.png.import~RF2f712673.TMP    |    34 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/bridge.fbx    |   Bin [31m0[m -> [32m36464[m bytes
+ .../Models/FBX format/bridge.fbx.import            |    37 [32m+[m
+ .../Models/FBX format/building-archery.fbx         |   Bin [31m0[m -> [32m44384[m bytes
+ .../Models/FBX format/building-archery.fbx.import  |    37 [32m+[m
+ .../Models/FBX format/building-cabin.fbx           |   Bin [31m0[m -> [32m42816[m bytes
+ .../Models/FBX format/building-cabin.fbx.import    |    37 [32m+[m
+ .../Models/FBX format/building-castle.fbx          |   Bin [31m0[m -> [32m55840[m bytes
+ .../Models/FBX format/building-castle.fbx.import   |    37 [32m+[m
+ .../Models/FBX format/building-dock.fbx            |   Bin [31m0[m -> [32m34352[m bytes
+ .../Models/FBX format/building-dock.fbx.import     |    37 [32m+[m
+ .../Models/FBX format/building-farm.fbx            |   Bin [31m0[m -> [32m30944[m bytes
+ .../Models/FBX format/building-farm.fbx.import     |    37 [32m+[m
+ .../Models/FBX format/building-house.fbx           |   Bin [31m0[m -> [32m37488[m bytes
+ .../Models/FBX format/building-house.fbx.import    |    37 [32m+[m
+ .../Models/FBX format/building-market.fbx          |   Bin [31m0[m -> [32m41648[m bytes
+ .../Models/FBX format/building-market.fbx.import   |    37 [32m+[m
+ .../Models/FBX format/building-mill.fbx            |   Bin [31m0[m -> [32m52512[m bytes
+ .../Models/FBX format/building-mill.fbx.import     |    37 [32m+[m
+ .../Models/FBX format/building-mine.fbx            |   Bin [31m0[m -> [32m35968[m bytes
+ .../Models/FBX format/building-mine.fbx.import     |    37 [32m+[m
+ .../Models/FBX format/building-port.fbx            |   Bin [31m0[m -> [32m36992[m bytes
+ .../Models/FBX format/building-port.fbx.import     |    37 [32m+[m
+ .../Models/FBX format/building-sheep.fbx           |   Bin [31m0[m -> [32m47152[m bytes
+ .../Models/FBX format/building-sheep.fbx.import    |    37 [32m+[m
+ .../Models/FBX format/building-smelter.fbx         |   Bin [31m0[m -> [32m40704[m bytes
+ .../Models/FBX format/building-smelter.fbx.import  |    37 [32m+[m
+ .../Models/FBX format/building-tower.fbx           |   Bin [31m0[m -> [32m45440[m bytes
+ .../Models/FBX format/building-tower.fbx.import    |    37 [32m+[m
+ .../Models/FBX format/building-village.fbx         |   Bin [31m0[m -> [32m37648[m bytes
+ .../Models/FBX format/building-village.fbx.import  |    37 [32m+[m
+ .../Models/FBX format/building-wall.fbx            |   Bin [31m0[m -> [32m50960[m bytes
+ .../Models/FBX format/building-wall.fbx.import     |    37 [32m+[m
+ .../Models/FBX format/building-walls.fbx           |   Bin [31m0[m -> [32m62224[m bytes
+ .../Models/FBX format/building-walls.fbx.import    |    37 [32m+[m
+ .../Models/FBX format/building-watermill.fbx       |   Bin [31m0[m -> [32m53968[m bytes
+ .../FBX format/building-watermill.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/building-wizard-tower.fbx    |   Bin [31m0[m -> [32m60128[m bytes
+ .../FBX format/building-wizard-tower.fbx.import    |    37 [32m+[m
+ .../Models/FBX format/dirt-lumber.fbx              |   Bin [31m0[m -> [32m38752[m bytes
+ .../Models/FBX format/dirt-lumber.fbx.import       |    37 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/dirt.fbx      |   Bin [31m0[m -> [32m26224[m bytes
+ .../Models/FBX format/dirt.fbx.import              |    37 [32m+[m
+ .../Models/FBX format/grass-forest.fbx             |   Bin [31m0[m -> [32m45344[m bytes
+ .../Models/FBX format/grass-forest.fbx.import      |    37 [32m+[m
+ .../Models/FBX format/grass-hill.fbx               |   Bin [31m0[m -> [32m40784[m bytes
+ .../Models/FBX format/grass-hill.fbx.import        |    37 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/grass.fbx     |   Bin [31m0[m -> [32m28096[m bytes
+ .../Models/FBX format/grass.fbx.import             |    37 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/model/SSS.png |   Bin [31m0[m -> [32m9325[m bytes
+ .../Models/FBX format/model/SSS.png.import         |    34 [32m+[m
+ .../FBX format/model/materials/eye_mat_L.tres      |    15 [32m+[m
+ .../FBX format/model/materials/eye_mat_R.tres      |    15 [32m+[m
+ .../model/materials/eye_mat_override.tres          |    14 [32m+[m
+ .../FBX format/model/materials/mouth_mat.tres      |    13 [32m+[m
+ .../model/materials/sophia_material.tres           |    25 [32m+[m
+ .../Models/FBX format/model/sophia.glb             |   Bin [31m0[m -> [32m2635436[m bytes
+ .../Models/FBX format/model/sophia.glb.import      | 10862 [32m+++++++++++++++++++[m
+ .../Models/FBX format/model/sophia_diffuse.png     |   Bin [31m0[m -> [32m137359[m bytes
+ .../FBX format/model/sophia_diffuse.png.import     |    35 [32m+[m
+ .../FBX format/model/sophia_eye_open_diffuse.png   |   Bin [31m0[m -> [32m4169[m bytes
+ .../model/sophia_eye_open_diffuse.png.import       |    35 [32m+[m
+ .../FBX format/model/sophia_eye_open_normal.png    |   Bin [31m0[m -> [32m62154[m bytes
+ .../model/sophia_eye_open_normal.png.import        |    35 [32m+[m
+ .../model/sophia_mouth_smile_diffuse.png           |   Bin [31m0[m -> [32m892[m bytes
+ .../model/sophia_mouth_smile_diffuse.png.import    |    35 [32m+[m
+ .../FBX format/model/sophia_mouth_smile_normal.png |   Bin [31m0[m -> [32m5685[m bytes
+ .../model/sophia_mouth_smile_normal.png.import     |    35 [32m+[m
+ .../Models/FBX format/model/sophia_normal.png      |   Bin [31m0[m -> [32m349915[m bytes
+ .../FBX format/model/sophia_normal.png.import      |    35 [32m+[m
+ .../Models/FBX format/model/sophia_roughness.png   |   Bin [31m0[m -> [32m94457[m bytes
+ .../FBX format/model/sophia_roughness.png.import   |    35 [32m+[m
+ .../FBX format/model/textures/eyes_diffuse_map.png |   Bin [31m0[m -> [32m14222[m bytes
+ .../model/textures/eyes_diffuse_map.png.import     |    35 [32m+[m
+ .../FBX format/model/textures/eyes_normal_map.png  |   Bin [31m0[m -> [32m37634[m bytes
+ .../model/textures/eyes_normal_map.png.import      |    35 [32m+[m
+ .../Models/FBX format/path-corner-sharp.fbx        |   Bin [31m0[m -> [32m26560[m bytes
+ .../Models/FBX format/path-corner-sharp.fbx.import |    37 [32m+[m
+ .../Models/FBX format/path-corner.fbx              |   Bin [31m0[m -> [32m29152[m bytes
+ .../Models/FBX format/path-corner.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/path-crossing.fbx            |   Bin [31m0[m -> [32m27776[m bytes
+ .../Models/FBX format/path-crossing.fbx.import     |    37 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/path-end.fbx  |   Bin [31m0[m -> [32m27104[m bytes
+ .../Models/FBX format/path-end.fbx.import          |    37 [32m+[m
+ .../Models/FBX format/path-intersectionA.fbx       |   Bin [31m0[m -> [32m27056[m bytes
+ .../FBX format/path-intersectionA.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/path-intersectionB.fbx       |   Bin [31m0[m -> [32m27200[m bytes
+ .../FBX format/path-intersectionB.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/path-intersectionC.fbx       |   Bin [31m0[m -> [32m27264[m bytes
+ .../FBX format/path-intersectionC.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/path-intersectionD.fbx       |   Bin [31m0[m -> [32m27824[m bytes
+ .../FBX format/path-intersectionD.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/path-intersectionE.fbx       |   Bin [31m0[m -> [32m27616[m bytes
+ .../FBX format/path-intersectionE.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/path-intersectionF.fbx       |   Bin [31m0[m -> [32m27680[m bytes
+ .../FBX format/path-intersectionF.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/path-intersectionG.fbx       |   Bin [31m0[m -> [32m28224[m bytes
+ .../FBX format/path-intersectionG.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/path-intersectionH.fbx       |   Bin [31m0[m -> [32m27136[m bytes
+ .../FBX format/path-intersectionH.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/path-square-end.fbx          |   Bin [31m0[m -> [32m28800[m bytes
+ .../Models/FBX format/path-square-end.fbx.import   |    37 [32m+[m
+ .../Models/FBX format/path-square.fbx              |   Bin [31m0[m -> [32m27232[m bytes
+ .../Models/FBX format/path-square.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/path-start.fbx               |   Bin [31m0[m -> [32m29040[m bytes
+ .../Models/FBX format/path-start.fbx.import        |    37 [32m+[m
+ .../Models/FBX format/path-straight.fbx            |   Bin [31m0[m -> [32m28752[m bytes
+ .../Models/FBX format/path-straight.fbx.import     |    37 [32m+[m
+ .../Models/FBX format/river-corner-sharp.fbx       |   Bin [31m0[m -> [32m27760[m bytes
+ .../FBX format/river-corner-sharp.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/river-corner.fbx             |   Bin [31m0[m -> [32m27888[m bytes
+ .../Models/FBX format/river-corner.fbx.import      |    37 [32m+[m
+ .../Models/FBX format/river-crossing.fbx           |   Bin [31m0[m -> [32m31216[m bytes
+ .../Models/FBX format/river-crossing.fbx.import    |    37 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/river-end.fbx |   Bin [31m0[m -> [32m26032[m bytes
+ .../Models/FBX format/river-end.fbx.import         |    37 [32m+[m
+ .../Models/FBX format/river-intersectionA.fbx      |   Bin [31m0[m -> [32m28352[m bytes
+ .../FBX format/river-intersectionA.fbx.import      |    37 [32m+[m
+ .../Models/FBX format/river-intersectionB.fbx      |   Bin [31m0[m -> [32m30032[m bytes
+ .../FBX format/river-intersectionB.fbx.import      |    37 [32m+[m
+ .../Models/FBX format/river-intersectionC.fbx      |   Bin [31m0[m -> [32m28672[m bytes
+ .../FBX format/river-intersectionC.fbx.import      |    37 [32m+[m
+ .../Models/FBX format/river-intersectionD.fbx      |   Bin [31m0[m -> [32m30064[m bytes
+ .../FBX format/river-intersectionD.fbx.import      |    37 [32m+[m
+ .../Models/FBX format/river-intersectionE.fbx      |   Bin [31m0[m -> [32m29744[m bytes
+ .../FBX format/river-intersectionE.fbx.import      |    37 [32m+[m
+ .../Models/FBX format/river-intersectionF.fbx      |   Bin [31m0[m -> [32m29344[m bytes
+ .../FBX format/river-intersectionF.fbx.import      |    37 [32m+[m
+ .../Models/FBX format/river-intersectionG.fbx      |   Bin [31m0[m -> [32m30416[m bytes
+ .../FBX format/river-intersectionG.fbx.import      |    37 [32m+[m
+ .../Models/FBX format/river-intersectionH.fbx      |   Bin [31m0[m -> [32m29040[m bytes
+ .../FBX format/river-intersectionH.fbx.import      |    37 [32m+[m
+ .../Models/FBX format/river-start.fbx              |   Bin [31m0[m -> [32m26736[m bytes
+ .../Models/FBX format/river-start.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/river-straight.fbx           |   Bin [31m0[m -> [32m26416[m bytes
+ .../Models/FBX format/river-straight.fbx.import    |    37 [32m+[m
+ .../Models/FBX format/sand-desert.fbx              |   Bin [31m0[m -> [32m36144[m bytes
+ .../Models/FBX format/sand-desert.fbx.import       |    37 [32m+[m
+ .../Models/FBX format/sand-rocks.fbx               |   Bin [31m0[m -> [32m28096[m bytes
+ .../Models/FBX format/sand-rocks.fbx.import        |    37 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/sand.fbx      |   Bin [31m0[m -> [32m28096[m bytes
+ .../Models/FBX format/sand.fbx.import              |    37 [32m+[m
+ .../Models/FBX format/sophia_skin.gd               |    54 [32m+[m
+ .../Models/FBX format/sophia_skin.tscn             |   321 [32m+[m
+ .../Models/FBX format/sophia_skin/model/SSS.png    |   Bin [31m0[m -> [32m9325[m bytes
+ .../FBX format/sophia_skin/model/SSS.png.import    |    34 [32m+[m
+ .../sophia_skin/model/materials/eye_mat_L.tres     |    15 [32m+[m
+ .../sophia_skin/model/materials/eye_mat_R.tres     |    15 [32m+[m
+ .../model/materials/eye_mat_override.tres          |    14 [32m+[m
+ .../sophia_skin/model/materials/mouth_mat.tres     |    13 [32m+[m
+ .../model/materials/sophia_material.tres           |    25 [32m+[m
+ .../Models/FBX format/sophia_skin/model/sophia.glb |   Bin [31m0[m -> [32m2635436[m bytes
+ .../FBX format/sophia_skin/model/sophia.glb.import | 10862 [32m+++++++++++++++++++[m
+ .../sophia_skin/model/sophia_diffuse.png           |   Bin [31m0[m -> [32m137359[m bytes
+ .../sophia_skin/model/sophia_diffuse.png.import    |    35 [32m+[m
+ .../sophia_skin/model/sophia_eye_open_diffuse.png  |   Bin [31m0[m -> [32m4169[m bytes
+ .../model/sophia_eye_open_diffuse.png.import       |    35 [32m+[m
+ .../sophia_skin/model/sophia_eye_open_normal.png   |   Bin [31m0[m -> [32m62154[m bytes
+ .../model/sophia_eye_open_normal.png.import        |    35 [32m+[m
+ .../model/sophia_mouth_smile_diffuse.png           |   Bin [31m0[m -> [32m892[m bytes
+ .../model/sophia_mouth_smile_diffuse.png.import    |    35 [32m+[m
+ .../model/sophia_mouth_smile_normal.png            |   Bin [31m0[m -> [32m5685[m bytes
+ .../model/sophia_mouth_smile_normal.png.import     |    35 [32m+[m
+ .../FBX format/sophia_skin/model/sophia_normal.png |   Bin [31m0[m -> [32m349915[m bytes
+ .../sophia_skin/model/sophia_normal.png.import     |    35 [32m+[m
+ .../sophia_skin/model/sophia_roughness.png         |   Bin [31m0[m -> [32m94457[m bytes
+ .../sophia_skin/model/sophia_roughness.png.import  |    35 [32m+[m
+ .../model/textures/eyes_diffuse_map.png            |   Bin [31m0[m -> [32m14222[m bytes
+ .../model/textures/eyes_diffuse_map.png.import     |    35 [32m+[m
+ .../sophia_skin/model/textures/eyes_normal_map.png |   Bin [31m0[m -> [32m37634[m bytes
+ .../model/textures/eyes_normal_map.png.import      |    35 [32m+[m
+ .../Models/FBX format/sophia_skin/sophia_skin.gd   |    54 [32m+[m
+ .../Models/FBX format/sophia_skin/sophia_skin.tscn |   321 [32m+[m
+ .../Models/FBX format/stone-hill.fbx               |   Bin [31m0[m -> [32m30272[m bytes
+ .../Models/FBX format/stone-hill.fbx.import        |    37 [32m+[m
+ .../Models/FBX format/stone-mountain.fbx           |   Bin [31m0[m -> [32m31984[m bytes
+ .../Models/FBX format/stone-mountain.fbx.import    |    37 [32m+[m
+ .../Models/FBX format/stone-rocks.fbx              |   Bin [31m0[m -> [32m33104[m bytes
+ .../Models/FBX format/stone-rocks.fbx.import       |    37 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/stone.fbx     |   Bin [31m0[m -> [32m28096[m bytes
+ .../Models/FBX format/stone.fbx.import             |    37 [32m+[m
+ .../Models/FBX format/unit-house.fbx               |   Bin [31m0[m -> [32m26528[m bytes
+ .../Models/FBX format/unit-house.fbx.import        |    37 [32m+[m
+ .../Models/FBX format/unit-mansion.fbx             |   Bin [31m0[m -> [32m26560[m bytes
+ .../Models/FBX format/unit-mansion.fbx.import      |    37 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/unit-mill.fbx |   Bin [31m0[m -> [32m40368[m bytes
+ .../Models/FBX format/unit-mill.fbx.import         |    37 [32m+[m
+ .../Models/FBX format/unit-ship-large.fbx          |   Bin [31m0[m -> [32m27744[m bytes
+ .../Models/FBX format/unit-ship-large.fbx.import   |    37 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/unit-ship.fbx |   Bin [31m0[m -> [32m26512[m bytes
+ .../Models/FBX format/unit-ship.fbx.import         |    37 [32m+[m
+ .../Models/FBX format/unit-tower.fbx               |   Bin [31m0[m -> [32m30688[m bytes
+ .../Models/FBX format/unit-tower.fbx.import        |    37 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/unit-tree.fbx |   Bin [31m0[m -> [32m27184[m bytes
+ .../Models/FBX format/unit-tree.fbx.import         |    37 [32m+[m
+ .../Models/FBX format/unit-wall-tower.fbx          |   Bin [31m0[m -> [32m29296[m bytes
+ .../Models/FBX format/unit-wall-tower.fbx.import   |    37 [32m+[m
+ .../Models/FBX format/water-island.fbx             |   Bin [31m0[m -> [32m28080[m bytes
+ .../Models/FBX format/water-island.fbx.import      |    37 [32m+[m
+ .../Models/FBX format/water-rocks.fbx              |   Bin [31m0[m -> [32m30384[m bytes
+ .../Models/FBX format/water-rocks.fbx.import       |    37 [32m+[m
+ kenney_hexagon-kit/Models/FBX format/water.fbx     |   Bin [31m0[m -> [32m26224[m bytes
+ .../Models/FBX format/water.fbx.import             |    37 [32m+[m
+ .../Models/GLB format/Textures/colormap.png        |   Bin [31m0[m -> [32m10831[m bytes
+ .../Models/GLB format/Textures/colormap.png.import |    35 [32m+[m
+ kenney_hexagon-kit/Models/GLB format/bridge.glb    |   Bin [31m0[m -> [32m36344[m bytes
+ .../Models/GLB format/bridge.glb.import            |    36 [32m+[m
+ .../Models/GLB format/building-archery.glb         |   Bin [31m0[m -> [32m58632[m bytes
+ .../Models/GLB format/building-archery.glb.import  |    36 [32m+[m
+ .../Models/GLB format/building-cabin.glb           |   Bin [31m0[m -> [32m43816[m bytes
+ .../Models/GLB format/building-cabin.glb.import    |    36 [32m+[m
+ .../Models/GLB format/building-castle.glb          |   Bin [31m0[m -> [32m88592[m bytes
+ .../Models/GLB format/building-castle.glb.import   |    36 [32m+[m
+ .../Models/GLB format/building-dock.glb            |   Bin [31m0[m -> [32m28980[m bytes
+ .../Models/GLB format/building-dock.glb.import     |    36 [32m+[m
+ .../Models/GLB format/building-farm.glb            |   Bin [31m0[m -> [32m18928[m bytes
+ .../Models/GLB format/building-farm.glb.import     |    36 [32m+[m
+ .../Models/GLB format/building-house.glb           |   Bin [31m0[m -> [32m35452[m bytes
+ .../Models/GLB format/building-house.glb.import    |    36 [32m+[m
+ .../Models/GLB format/building-market.glb          |   Bin [31m0[m -> [32m52276[m bytes
+ .../Models/GLB format/building-market.glb.import   |    36 [32m+[m
+ .../Models/GLB format/building-mill.glb            |   Bin [31m0[m -> [32m48284[m bytes
+ .../Models/GLB format/building-mill.glb.import     |    36 [32m+[m
+ .../Models/GLB format/building-mine.glb            |   Bin [31m0[m -> [32m32812[m bytes
+ .../Models/GLB format/building-mine.glb.import     |    36 [32m+[m
+ .../Models/GLB format/building-port.glb            |   Bin [31m0[m -> [32m38128[m bytes
+ .../Models/GLB format/building-port.glb.import     |    36 [32m+[m
+ .../Models/GLB format/building-sheep.glb           |   Bin [31m0[m -> [32m71656[m bytes
+ .../Models/GLB format/building-sheep.glb.import    |    36 [32m+[m
+ .../Models/GLB format/building-smelter.glb         |   Bin [31m0[m -> [32m42872[m bytes
+ .../Models/GLB format/building-smelter.glb.import  |    36 [32m+[m
+ .../Models/GLB format/building-tower.glb           |   Bin [31m0[m -> [32m50916[m bytes
+ .../Models/GLB format/building-tower.glb.import    |    36 [32m+[m
+ .../Models/GLB format/building-village.glb         |   Bin [31m0[m -> [32m40412[m bytes
+ .../Models/GLB format/building-village.glb.import  |    36 [32m+[m
+ .../Models/GLB format/building-wall.glb            |   Bin [31m0[m -> [32m64584[m bytes
+ .../Models/GLB format/building-wall.glb.import     |    36 [32m+[m
+ .../Models/GLB format/building-walls.glb           |   Bin [31m0[m -> [32m108708[m bytes
+ .../Models/GLB format/building-walls.glb.import    |    36 [32m+[m
+ .../Models/GLB format/building-watermill.glb       |   Bin [31m0[m -> [32m55712[m bytes
+ .../GLB format/building-watermill.glb.import       |    36 [32m+[m
+ .../Models/GLB format/building-wizard-tower.glb    |   Bin [31m0[m -> [32m88
